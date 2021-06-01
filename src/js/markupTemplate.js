@@ -1,9 +1,9 @@
 import refs from './refs';
-import template from '../templates/templates.hbs';
+import template from '../templates/template.hbs';
 
 const updateMarkup = images => {
     let markup = template(images);
-    refs.galleryList.insertAdjacentElement('beforeend', markup);
+    refs.galleryList.insertAdjacentHTML('beforeend', markup);
 
 };
 
