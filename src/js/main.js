@@ -33,9 +33,9 @@ export const moreImages = () => {
   apiService(inputValue, page, API_KEY)
     .then(images => {
       markupTpl(images);
-      scrollTo({
-        top: document.documentElement.offsetHeight - 1600,
+      refs.loadMore.scrollIntoView({
         behavior: 'smooth',
+        block: 'end',
       });
     })
     .catch(error => caonsole.log(error));
